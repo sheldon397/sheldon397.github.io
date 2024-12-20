@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+</head>
+<body>
+    <h1>个人简历</h1>
+    <p>姓名：{{ name }}</p>
+    <p>性别：{{ gender }}</p>
+    <p>出生日期：{{ birthday }}</p>
+    <p>联系方式：{{ contact }}</p>
+    <p>教育经历：</p>
+    <ul>
+        {% for edu in education %}
+        <li>{{ edu.school }} {{ edu.major }} {{ edu.degree }} {{ edu.time }}</li>
+        {% endfor %}
+    </ul>
+    <p>工作经历：</p>
+    <ul>
+        {% for work in work_experience %}
+        <li>{{ work.company }} {{ work.position }} {{ work.time }}</li>
+        {% endfor %}
+    </ul>
+    <p>项目经验：</p>
+    <ul>
+        {% for project in project_experience %}
+        <li>{{ project.name }} {{ project.time }}</li>
+        {% endfor %}
+</body>
